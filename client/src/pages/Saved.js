@@ -7,11 +7,11 @@ import ItemCard from '../components/ItemCard'
 
 export default function Saved() {
     return (
-        <Stack>
+        <Stack paddingTop={{md: '60px'}}>
             <Flex justifyContent={'space-between'}>
-                <IconButton size={'xs'} variant='outline'><ArrowBackIcon/></IconButton>
-                <Flex w="full" justifyContent={'center'}>
-                 <Heading size={'md'} justifySelf="center">Saved Deals</Heading>
+                <IconButton size={'xs'} variant='outline' display={{base: 'flex', md: 'none'}}><ArrowBackIcon/></IconButton>
+                <Flex w="full" justifyContent={{base: "center", md: 'flex-start'}}>
+                 <Heading size={'md'} justifySelf={{base: "center", md: 'flex-start'}}>Saved Deals</Heading>
                  </Flex>
             </Flex>
             <Stack paddingY={4}>

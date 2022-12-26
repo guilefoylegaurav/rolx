@@ -4,13 +4,14 @@ import { BsPerson } from 'react-icons/bs'
 import React from 'react'
 import { Flex, InputGroup, InputLeftElement, Input, Box, Icon, Button, Heading, Container } from '@chakra-ui/react'
 import { SearchIcon} from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 export default function FixedNav() {
     // const { colorMode, toggleColorMode } = useColorMode()
     return (
         <>
             <Flex as="header"
-                
+                zIndex="overlay"
                 position="fixed" w="full" bg="white" shadow="md">
                 
                 <Container maxW="container.xl">
@@ -35,10 +36,10 @@ export default function FixedNav() {
                     </InputGroup>
                     <Button size={'sm'} variant="ghost">Search</Button>
                     <Box flex="1"></Box>
-                    <Icon as={AiOutlineHome} fontSize="xl" color="purple.600"></Icon>
-                    <Icon as={AiOutlinePlusCircle} fontSize="xl" color="purple.300"></Icon>
-                    <Icon as={AiOutlineHeart} fontSize="xl" color="purple.300"></Icon>
-                    <Icon as={BsPerson} fontSize="xl" color="purple.300"></Icon>
+                    <Link to="/"><Icon as={AiOutlineHome} fontSize="xl" color="purple.600"></Icon></Link>
+                    <Link to="/addListing"><Icon as={AiOutlinePlusCircle} fontSize="xl" color="purple.300"></Icon></Link>
+                    <Link to="/saved"><Icon as={AiOutlineHeart} fontSize="xl" color="purple.300"></Icon></Link>
+                    <Link to="/profile"><Icon as={BsPerson} fontSize="xl" color="purple.300"></Icon></Link>
                     {/* <Button onClick={toggleColorMode} size="xs" variant="outline" color="purple.300">{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}</Button> */}
                     </Flex>
                 

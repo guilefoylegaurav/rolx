@@ -64,7 +64,7 @@ export default function SinglePost() {
           </Button>
         </GridItem>
         </SimpleGrid> */}
-         <Button  variant="solid" width="full" size="lg" bgGradient='linear(to-t, purple.400, purple.200)' color="white">
+         <Button alignSelf={{base: 'auto', md: 'flex-end'}}  variant="solid" size={{base:"lg", md: 'sm'}} bgGradient='linear(to-t, purple.400, purple.200)' color="white">
           Contact seller
           </Button>
 

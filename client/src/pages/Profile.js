@@ -34,12 +34,14 @@ export default function Profile() {
             <Textarea placeholder="Enter detailed bio " />
           </FormControl>
         </GridItem>
-        <GridItem colSpan={4}>
-          <Button leftIcon={<Icon as={BsPerson} />} variant="solid" width="full" size="lg" bgGradient='linear(to-t, purple.400, purple.200)' color="white">
+       
+         
+       
+      </SimpleGrid>
+     
+      <Button leftIcon={<Icon as={BsPerson} />} alignSelf={{base: 'auto', md:'flex-end'}} variant="solid" size= {{base:"lg", md:'sm'}} bgGradient='linear(to-t, purple.400, purple.200)' color="white">
             Update Profile
           </Button>
-        </GridItem>
-      </SimpleGrid>
       <Accordion allowToggle paddingBottom={'10'}>
         <AccordionItem>
           <h2>
