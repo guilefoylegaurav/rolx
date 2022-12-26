@@ -2,11 +2,11 @@ import TabItem from '../components/TabItem'
 import { AiOutlineHome, AiOutlinePlusCircle, AiOutlineHeart } from 'react-icons/ai'
 import { BsPerson } from 'react-icons/bs'
 import React from 'react'
-import { Flex, InputGroup, InputLeftElement, Input, Box, Icon, Button, Heading, Container, useColorMode } from '@chakra-ui/react'
-import { MoonIcon, SearchIcon, SunIcon } from '@chakra-ui/icons'
+import { Flex, InputGroup, InputLeftElement, Input, Box, Icon, Button, Heading, Container } from '@chakra-ui/react'
+import { SearchIcon} from '@chakra-ui/icons'
 
 export default function FixedNav() {
-    const { colorMode, toggleColorMode } = useColorMode()
+    // const { colorMode, toggleColorMode } = useColorMode()
     return (
         <>
             <Flex as="header"
@@ -39,7 +39,7 @@ export default function FixedNav() {
                     <Icon as={AiOutlinePlusCircle} fontSize="xl" color="purple.300"></Icon>
                     <Icon as={AiOutlineHeart} fontSize="xl" color="purple.300"></Icon>
                     <Icon as={BsPerson} fontSize="xl" color="purple.300"></Icon>
-                    <Button onClick={toggleColorMode} size="xs" variant="outline" color="purple.300">{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}</Button>
+                    {/* <Button onClick={toggleColorMode} size="xs" variant="outline" color="purple.300">{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}</Button> */}
                     </Flex>
                 
                 </Container>
@@ -48,13 +48,14 @@ export default function FixedNav() {
 
             </Flex>
             <Flex as="footer"
+                zIndex="overlay"
                 padding={2}
                 display={{ base: "flex", md: "none" }}
                 position="fixed" marginX={{ base: "1vh", md: 0 }} w={{ base: "96vw", md: "full" }} bottom={2} h={12} bg="white" shadow="dark-lg" justifyContent="space-around" borderBottomRadius={10}>
-                <TabItem icon={AiOutlineHome} activated />
-                <TabItem icon={AiOutlinePlusCircle} />
-                <TabItem icon={AiOutlineHeart} />
-                <TabItem icon={BsPerson} />
+                <TabItem path="/" icon={AiOutlineHome} activated />
+                <TabItem path="/addListing" icon={AiOutlinePlusCircle} />
+                <TabItem path="/saved"  icon={AiOutlineHeart} />
+                <TabItem path="/profile"  icon={BsPerson} />
 
             </Flex>
 

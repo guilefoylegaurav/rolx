@@ -28,6 +28,8 @@ const replaceExisting = {
 
 const customTheme = extendTheme(
     {
+        initialColorMode: 'light',
+        useSystemColorMode: false,
         fonts: {
             heading: `Poppins, ${base.fonts.heading} `,
             body: `Poppins, ${base.fonts.heading} `
