@@ -2,10 +2,11 @@ import { Container, Stack } from '@chakra-ui/react';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import AddListing from './pages/AddListing';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Saved from './pages/Saved';
+import SinglePost from './pages/SinglePost';
+import UpdateListing from './pages/UpdateListing';
 import FixedNav from './widgets/FixedNav';
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       <Container maxW="container.xl" padding={5}>
         <Stack>
           <Routes>
-            <Route path="/" index element={<Home />} />
-            <Route path="/addListing" element={< AddListing />} />
+            <Route path="/" index element={<Home />} /><Route path="/" index element={<Home />} />
+            <Route path="/listing/:id" index element={<SinglePost />} />
+            <Route path="/addListing" element={< UpdateListing addNew/>} />
             <Route path="/saved" element={<Saved />} />
             <Route path="/profile" element={<Profile />} />
 
