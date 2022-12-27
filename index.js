@@ -3,14 +3,15 @@ const app = express()
 const path = require('path');
 
 require('dotenv').config();
-
+const router = (global.router = (express.Router()));
 const port = process.env.PORT || 5000;
+const cors = require('cors')
 
 app.use(express.json());
 
-app.get('/try', (req, res) => {
-    res.send('Hello World!')
-})
+app.use('/api/ads', require('./routes/ad.js'));
+app.use('/api/profile', require('./routes/profile.js'));
+app.use(router);
 
 
 app.use(express.static(path.join(__dirname, 'client/build')));
